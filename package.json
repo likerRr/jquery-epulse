@@ -1,0 +1,38 @@
+{
+  "name": "jquery-epulse",
+  "version": "0.1.0",
+  "description": "jQuery plugin for creating ripple effects on event occurrence",
+  "keywords": [
+    "epulse",
+    "jquery-plugin",
+    "ripple",
+    "mobile",
+    "lightweight",
+    "event",
+    "events",
+    "pulse"
+  ],
+  "main": "dist/jquery-epulse.min.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/likerRr/jquery-epulse.git"
+  },
+  "author": "Alexey Lizurchik <al.lizurchik@gmail.com> (http://likerrr.ru)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/likerRr/jquery-epulse/issues"
+  },
+  "homepage": "https://github.com/likerRr/jquery-epulse#readme",
+  "dependencies": {
+    "jquery": "^2.0.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-uglify": "^1.2.0"
+  }
+}
