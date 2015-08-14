@@ -1,6 +1,6 @@
 {
   "name": "jquery-epulse",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "jQuery plugin for creating ripple effects on event occurrence",
   "keywords": [
     "epulse",
