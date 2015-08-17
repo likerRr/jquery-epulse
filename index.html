@@ -160,7 +160,10 @@
 	}
 </script>
 <script>
-	$("#example").ePulse({bgColor: 'rgba(225, 190, 231, 0.5)', event: 'mousedown'});
+	$.fn.ripple = function() {
+		$(this).ePulse({bgColor: 'rgba(225, 190, 231, 0.5)', event: 'mousedown'})
+	};
+	$("#example").ripple();
 </script>
 
 </body>
