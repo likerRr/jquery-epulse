@@ -33,7 +33,7 @@ There are 3 different versions available for including:
 - `/dist/jquery-epulse.js` - built from source version
 
 # How to
-ePulse is jQuery plugin, so you can use it like other jQuery functions. So, here is simple ripple effect on button example:
+ePulse is jQuery plugin, so you can use it like other jQuery functions. So, here is simple ripple effect [example](https://likerrr.github.io/jquery-epulse/#how-to):
 ```css
 button {
   // for proper work, position must be either relative or absolute
@@ -55,8 +55,6 @@ $.fn.ripple = function() {
 }
 $("button").ripple();
 ```
-
-# [Demo](https://likerrr.github.io/jquery-epulse/)
 
 # LICENSE
 http://likerrr.mit-license.org
