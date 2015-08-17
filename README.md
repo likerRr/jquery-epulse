@@ -50,7 +50,10 @@ button {
 <button>I'm a button</button>
 ```
 ```javascript
-$("button").ePulse({bgColor: 'rgba(225, 190, 231, 0.5)', event: 'mousedown'});
+$.fn.ripple = function() {
+  $(this).ePulse({bgColor: 'rgba(225, 190, 231, 0.5)', event: 'mousedown'});
+}
+$("button").ripple();
 ```
 
 # [Demo](https://likerrr.github.io/jquery-epulse/)
