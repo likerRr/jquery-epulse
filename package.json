@@ -25,7 +25,7 @@
   "bugs": {
     "url": "https://github.com/likerRr/jquery-epulse/issues"
   },
-  "homepage": "https://github.com/likerRr/jquery-epulse#readme",
+  "homepage": "https://likerrr.github.io/jquery-epulse/",
   "dependencies": {
     "jquery": "^2.0.0"
   },
