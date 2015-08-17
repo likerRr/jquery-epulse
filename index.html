@@ -1,113 +1,167 @@
 <!DOCTYPE html>
 <html lang="en-us">
-  <head>
-    <meta charset="UTF-8">
-    <title>jQuery-epulse by likerRr</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
-  </head>
-  <body>
-    <section class="page-header">
-      <h1 class="project-name">jQuery-epulse</h1>
-      <h2 class="project-tagline">jQuery plugin for creating ripple effects on event occurrence</h2>
-      <a href="https://github.com/likerRr/jquery-epulse" class="btn">View on GitHub</a>
-      <a href="https://github.com/likerRr/jquery-epulse/zipball/master" class="btn">Download .zip</a>
-      <a href="https://github.com/likerRr/jquery-epulse/tarball/master" class="btn">Download .tar.gz</a>
-    </section>
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery-epulse by likerRr</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+	<link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script src="https://cdn.rawgit.com/likerRr/jquery-epulse/master/dist/jquery-epulse.min.js"></script>
+	<style>
+		#example {
+			position: relative;
+			overflow: hidden;
+			background: #9C27B0;
+			color: white;
+			padding: 5px 10px;
+			border: transparent;
+		}
+	</style>
+</head>
+<body>
+<section class="page-header">
+	<h1 class="project-name">jQuery-epulse</h1>
 
-    <section class="main-content">
-      <h1>
-<a id="epulse" class="anchor" href="#epulse" aria-hidden="true"><span class="octicon octicon-link"></span></a>ePulse</h1>
+	<h2 class="project-tagline">jQuery plugin for creating ripple effects on event occurrence</h2>
+	<a href="https://github.com/likerRr/jquery-epulse" class="btn">View on GitHub</a>
+	<a href="https://github.com/likerRr/jquery-epulse/zipball/master" class="btn">Download .zip</a>
+	<a href="https://github.com/likerRr/jquery-epulse/tarball/master" class="btn">Download .tar.gz</a>
+</section>
 
-<p>Lightweight(1.7kb) jQuery plugin for creating ripple effects on event occurrence</p>
+<section class="main-content">
+	<h1>
+		<a id="epulse" class="anchor" href="#epulse" aria-hidden="true"><span class="octicon octicon-link"></span></a>ePulse
+	</h1>
 
-<h1>
-<a id="install" class="anchor" href="#install" aria-hidden="true"><span class="octicon octicon-link"></span></a>Install</h1>
+	<p>Lightweight(1.7kb) jQuery plugin for creating ripple effects on event occurrence</p>
 
-<h2>
-<a id="npm" class="anchor" href="#npm" aria-hidden="true"><span class="octicon octicon-link"></span></a>npm</h2>
+	<h1>
+		<a id="install" class="anchor" href="#install" aria-hidden="true"><span class="octicon octicon-link"></span></a>Install
+	</h1>
 
-<p>If you use build system that supports CommonJS or AMD modules, then install through <code>npm</code></p>
+	<h2>
+		<a id="npm" class="anchor" href="#npm" aria-hidden="true"><span class="octicon octicon-link"></span></a>npm</h2>
 
-<p><code>npm install jquery-epulse</code></p>
+	<p>If you use build system that supports CommonJS or AMD modules, then install through <code>npm</code></p>
 
-<p>Then include in your *.js file</p>
+	<p><code>npm install jquery-epulse</code></p>
 
-<div class="highlight highlight-javascript"><pre><span class="pl-c1">require</span>(<span class="pl-s"><span class="pl-pds">'</span>jquery-epulse<span class="pl-pds">'</span></span>);</pre></div>
+	<p>Then include in your *.js file</p>
 
-<h2>
-<a id="bower" class="anchor" href="#bower" aria-hidden="true"><span class="octicon octicon-link"></span></a>bower</h2>
+	<div class="highlight highlight-javascript">
+		<pre><span class="pl-c1">require</span>(<span class="pl-s"><span class="pl-pds">'</span>jquery-epulse<span
+			class="pl-pds">'</span></span>);</pre>
+	</div>
 
-<p>In future releases</p>
+	<h2>
+		<a id="bower" class="anchor" href="#bower" aria-hidden="true"><span class="octicon octicon-link"></span></a>bower
+	</h2>
 
-<h2>
-<a id="manual" class="anchor" href="#manual" aria-hidden="true"><span class="octicon octicon-link"></span></a>manual</h2>
+	<p>In future releases</p>
 
-<p>For manual installation you can download one of the latest <a href="https://github.com/likerRr/jquery-epulse/releases">release</a> or clone this repo:</p>
+	<h2>
+		<a id="manual" class="anchor" href="#manual" aria-hidden="true"><span class="octicon octicon-link"></span></a>manual
+	</h2>
 
-<p><code>git clone https://github.com/likerRr/jquery-epulse.git</code></p>
+	<p>For manual installation you can download one of the latest <a
+		href="https://github.com/likerRr/jquery-epulse/releases">release</a> or clone this repo:</p>
 
-<p>Then just include plugin in your html</p>
+	<p><code>git clone https://github.com/likerRr/jquery-epulse.git</code></p>
 
-<div class="highlight highlight-html"><pre>&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>/dist/jquery-epulse.min.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</pre></div>
+	<p>Then just include plugin in your html</p>
 
-<p>There are 3 different versions available for including:</p>
+	<div class="highlight highlight-html">
+		<pre>&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span
+			class="pl-pds">"</span>/dist/jquery-epulse.min.js<span class="pl-pds">"</span></span>&gt;&lt;/<span
+			class="pl-ent">script</span>&gt;</pre>
+	</div>
 
-<ul>
-<li>
-<code>/dist/dev.jquery-epulse.min.js</code> - contains minified code and sourcemap for developing purposes</li>
-<li>
-<code>/dist/jquery-epulse.min.js</code> - minified, ready for production version</li>
-<li>
-<code>/dist/jquery-epulse.js</code> - built from source version</li>
-</ul>
+	<p>There are 3 different versions available for including:</p>
 
-<h1>
-<a id="how-to" class="anchor" href="#how-to" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to</h1>
+	<ul>
+		<li>
+			<code>/dist/dev.jquery-epulse.min.js</code> - contains minified code and sourcemap for developing purposes
+		</li>
+		<li>
+			<code>/dist/jquery-epulse.min.js</code> - minified, ready for production version
+		</li>
+		<li>
+			<code>/dist/jquery-epulse.js</code> - built from source version
+		</li>
+	</ul>
 
-<p>ePulse is jQuery plugin, so you can use it like other jQuery functions. So, here is simple ripple effect on button example:</p>
+	<h1>
+		<a id="how-to" class="anchor" href="#how-to" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to
+	</h1>
 
-<div class="highlight highlight-css"><pre><span class="pl-ent">button</span> {
-  // <span class="pl-c1">for</span> <span class="pl-c1">proper</span> <span class="pl-c1">work</span>, <span class="pl-c1"><span class="pl-c1">position</span></span> <span class="pl-c1">must</span> <span class="pl-c1">be</span> <span class="pl-c1">either</span> <span class="pl-c1">relative</span> <span class="pl-c1">or</span> <span class="pl-c1">absolute</span>
+	<p>ePulse is jQuery plugin, so you can use it like other jQuery functions. So, here is simple ripple effect on button
+		example:</p>
+
+	<div class="highlight highlight-css"><pre><span class="pl-ent">button</span> {
+  // <span class="pl-c1">for</span> <span class="pl-c1">proper</span> <span class="pl-c1">work</span>, <span
+			class="pl-c1"><span class="pl-c1">position</span></span> <span class="pl-c1">must</span> <span
+			class="pl-c1">be</span> <span class="pl-c1">either</span> <span class="pl-c1">relative</span> <span class="pl-c1">or</span> <span
+			class="pl-c1">absolute</span>
   <span class="pl-c1"><span class="pl-c1">position</span></span>: <span class="pl-c1">relative</span>;
   <span class="pl-c1"><span class="pl-c1">overflow</span></span>: <span class="pl-c1">hidden</span>;
   // <span class="pl-c1">simple</span> <span class="pl-c1">button</span> <span class="pl-c1">styles</span>
   <span class="pl-c1"><span class="pl-c1">background</span></span>: <span class="pl-c1">#9C27B0</span>;
     <span class="pl-c1"><span class="pl-c1">color</span></span>: <span class="pl-c1">white</span>;
-    <span class="pl-c1"><span class="pl-c1">padding</span></span>: <span class="pl-c1">5<span class="pl-k">px</span></span>;
+    <span class="pl-c1"><span class="pl-c1">padding</span></span>: <span class="pl-c1">5<span
+			class="pl-k">px</span></span>;
     <span class="pl-c1"><span class="pl-c1">border</span></span>: <span class="pl-c1">transparent</span>;
-}</pre></div>
+}</pre>
+	</div>
 
-<div class="highlight highlight-html"><pre>&lt;<span class="pl-ent">button</span>&gt;I'm a button&lt;/<span class="pl-ent">button</span>&gt;</pre></div>
+	<div class="highlight highlight-html">
+		<pre>&lt;<span class="pl-ent">button</span>&gt;I'm a button&lt;/<span class="pl-ent">button</span>&gt;</pre>
+	</div>
 
-<div class="highlight highlight-javascript"><pre>$(<span class="pl-s"><span class="pl-pds">"</span>button<span class="pl-pds">"</span></span>).<span class="pl-c1">ePulse</span>({bgColor<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>rgba(225, 190, 231, 0.5)<span class="pl-pds">'</span></span>, <span class="pl-c1">event</span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>mousedown<span class="pl-pds">'</span></span>});</pre></div>
+	<div class="highlight highlight-javascript">
+		<pre>$(<span class="pl-s"><span class="pl-pds">"</span>button<span class="pl-pds">"</span></span>).<span
+			class="pl-c1">ePulse</span>({bgColor<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>rgba(225, 190, 231, 0.5)<span
+			class="pl-pds">'</span></span>, <span class="pl-c1">event</span><span class="pl-k">:</span> <span
+			class="pl-s"><span class="pl-pds">'</span>mousedown<span class="pl-pds">'</span></span>});</pre>
+	</div>
 
-<h1>
-<a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>LICENSE</h1>
+	<div>
+		<button id="example">Ripple button</button>
+	</div>
 
-<p><a href="http://likerrr.mit-license.org">http://likerrr.mit-license.org</a></p>
+	<h1>
+		<a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>LICENSE
+	</h1>
 
-      <footer class="site-footer">
-        <span class="site-footer-owner"><a href="https://github.com/likerRr/jquery-epulse">jQuery-epulse</a> is maintained by <a href="https://github.com/likerRr">likerRr</a>.</span>
+	<p><a href="http://likerrr.mit-license.org">http://likerrr.mit-license.org</a></p>
 
-        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
-      </footer>
+	<footer class="site-footer">
+		<span class="site-footer-owner"><a href="https://github.com/likerRr/jquery-epulse">jQuery-epulse</a> is maintained by <a
+			href="https://github.com/likerRr">likerRr</a>.</span>
 
-    </section>
+		<span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a
+			href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason
+			Long</a>.</span>
+	</footer>
 
-            <script type="text/javascript">
-            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-          </script>
-          <script type="text/javascript">
-            try {
-              var pageTracker = _gat._getTracker("UA-66403745-1");
-            pageTracker._trackPageview();
-            } catch(err) {}
-          </script>
+</section>
 
-  </body>
+<script type="text/javascript">
+	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+	try {
+		var pageTracker = _gat._getTracker("UA-66403745-1");
+		pageTracker._trackPageview();
+	} catch (err) {
+	}
+</script>
+<script>
+	$("#example").ePulse({bgColor: 'rgba(225, 190, 231, 0.5)', event: 'mousedown'});
+</script>
+
+</body>
 </html>
