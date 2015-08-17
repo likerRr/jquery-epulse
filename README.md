@@ -41,9 +41,9 @@ button {
   overflow: hidden;
   // simple button styles
   background: #9C27B0;
-	color: white;
-	padding: 5px;
-	border: transparent;
+  color: white;
+  padding: 5px;
+  border: transparent;
 }
 ```
 ```html
