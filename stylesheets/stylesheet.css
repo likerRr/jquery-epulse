@@ -245,3 +245,27 @@ a {
 @media screen and (max-width: 42em) {
   .site-footer {
     font-size: 0.9rem; } }
+
+.collapse-item {
+  display: none;
+}
+
+a.expander,
+a.gist-link {
+  font-size: 14px;
+}
+
+.highlight {
+  position: relative;
+}
+
+.highlight-label {
+  position: absolute;
+  top: 0;
+  right: 5px;
+  font-size: 12px;
+}
+
+form * {
+  z-index: 100;
+}

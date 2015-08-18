@@ -10,16 +10,7 @@
 	<link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
 	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 	<script src="https://cdn.rawgit.com/likerRr/jquery-epulse/master/dist/jquery-epulse.min.js"></script>
-	<style>
-		#example {
-			position: relative;
-			overflow: hidden;
-			background: #009688;
-			color: white;
-			padding: 5px 10px;
-			border: transparent;
-		}
-	</style>
+	<script src="js/app.js"></script>
 </head>
 <body>
 <section class="page-header">
@@ -94,47 +85,31 @@
 	</ul>
 
 	<h1>
-		<a id="how-to" class="anchor" href="#how-to" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to
+		<a id="examples" class="anchor" href="#examples" aria-hidden="true"><span class="octicon octicon-link"></span></a>Examples
 	</h1>
 
-	<p>ePulse is jQuery plugin, so you can use it like other jQuery functions. So, here is simple ripple effect on button
-		example:</p>
+	<p id="ripple-button-example">Ripple effect example:</p>
 
-	<div class="highlight highlight-css"><pre><span class="pl-ent">button</span> {
-  // <span class="pl-c1">for</span> <span class="pl-c1">proper</span> <span class="pl-c1">work</span>, <span
-			class="pl-c1"><span class="pl-c1">position</span></span> <span class="pl-c1">must</span> <span
-			class="pl-c1">be</span> <span class="pl-c1">either</span> <span class="pl-c1">relative</span> <span class="pl-c1">or</span> <span
-			class="pl-c1">absolute</span>
-  <span class="pl-c1"><span class="pl-c1">position</span></span>: <span class="pl-c1">relative</span>;
-  <span class="pl-c1"><span class="pl-c1">overflow</span></span>: <span class="pl-c1">hidden</span>;
-  // <span class="pl-c1">simple</span> <span class="pl-c1">button</span> <span class="pl-c1">styles</span>
-  <span class="pl-c1"><span class="pl-c1">background</span></span>: <span class="pl-c1">#9C27B0</span>;
-  <span class="pl-c1"><span class="pl-c1">color</span></span>: <span class="pl-c1">white</span>;
-  <span class="pl-c1"><span class="pl-c1">padding</span></span>: <span class="pl-c1">5<span
-			class="pl-k">px</span></span>;
-  <span class="pl-c1"><span class="pl-c1">border</span></span>: <span class="pl-c1">transparent</span>;
-}</pre>
+	<!--Ripple button example-->
+	<a href="#ripple-button-code" class="expander">Show code</a>
+	(<a href="https://gist.github.com/likerRr/726af4b62e8703913f24" class="gist-link" target="_blank">gist</a>)
+	<div id="ripple-button-code" class="collapse-item">
+		<script src="https://gist.github.com/likerRr/726af4b62e8703913f24.js"></script>
 	</div>
-
-	<div class="highlight highlight-html">
-		<pre>&lt;<span class="pl-ent">button</span>&gt;I'm a button&lt;/<span class="pl-ent">button</span>&gt;</pre>
-	</div>
-
-	<div class="highlight highlight-javascript">
-		<pre><span class="pl-c1">$.fn</span>.<span class="pl-en">ripple</span> <span class="pl-k">=</span> <span
-			class="pl-k">function</span>() {
-  $(<span class="pl-v">this</span>).<span class="pl-c1">ePulse</span>({bgColor<span class="pl-k">:</span> <span
-				class="pl-s"><span class="pl-pds">'</span>rgba(225, 190, 231, 0.5)<span class="pl-pds">'</span></span>, <span
-				class="pl-c1">event</span><span class="pl-k">:</span> <span class="pl-s"><span
-				class="pl-pds">'</span>mousedown<span class="pl-pds">'</span></span>});
-}
-$(<span class="pl-s"><span class="pl-pds">"</span>button<span class="pl-pds">"</span></span>).<span
-				class="pl-c1">ripple</span>();</pre>
-	</div>
-
 	<div>
-		<button id="example">Ripple button</button>
+		<button id="ripple-button">Ripple button</button>
 	</div>
+	<!--end Ripple button example-->
+
+	<!--Rain effect example-->
+	<p id="rain-example">Rain effect:</p>
+	<a href="#rain-code" class="expander">Show code</a>
+	(<a href="https://gist.github.com/likerRr/28847df2048d90de0859" class="gist-link" target="_blank">gist</a>)
+	<div id="rain-code" class="collapse-item">
+		<script src="https://gist.github.com/likerRr/28847df2048d90de0859.js"></script>
+	</div>
+	<div id="rain-container"></div>
+	<!--end Rain effect example-->
 
 	<h1>
 		<a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>LICENSE
@@ -163,12 +138,6 @@ $(<span class="pl-s"><span class="pl-pds">"</span>button<span class="pl-pds">"</
 		pageTracker._trackPageview();
 	} catch (err) {
 	}
-</script>
-<script>
-	$.fn.ripple = function() {
-		$(this).ePulse({bgColor: 'rgba(225, 190, 231, 0.5)', event: 'mousedown'})
-	};
-	$("#example").ripple();
 </script>
 
 </body>
